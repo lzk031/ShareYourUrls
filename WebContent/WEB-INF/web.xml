@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+    <display-name>HW9</display-name>
+    <description>
+      Configuration file for HW9
+    </description>
+    
+    <servlet>
+        <servlet-name>    HW9-controller          </servlet-name>
+        <servlet-class>   controller.Controller   </servlet-class>
+        <init-param>
+          <param-name>    jdbcDriverName          </param-name> 
+	      <param-value>   com.mysql.jdbc.Driver   </param-value>
+        </init-param>
+        <init-param>
+          <param-name>    jdbcURL                 </param-name> 
+	      <param-value>   jdbc:mysql:///test    </param-value>
+        </init-param>
+        <init-param>
+          <param-name>    csvDir                  </param-name> 
+	      <param-value>                           </param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>   HW9-controller           </servlet-name>
+        <url-pattern>    *.do                     </url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>   manage.do                </welcome-file>
+    </welcome-file-list>
+</web-app>
